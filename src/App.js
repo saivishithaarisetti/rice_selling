@@ -1,25 +1,52 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { CartProvider } from './context/CartContext';
+import Header from './components/Header';
+import Home from './pages/Home';
+import Products from './pages/Products';
+import Cart from './components/Cart';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import { Filters } from './components/Filters';
+import { useState } from 'react';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <CartProvider>
+        <div className="app">
+          <Header />
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </main>
+        </div>
+      </CartProvider>
+    </Router>
   );
+
+  const App = () => {
+    const [priceRange, setPriceRange] = useState([0, 50]);
+    const [selectedType, setSelectedType] = useState('All');
+  
+    return (
+      <div className="p-8">
+        <Filters
+          priceRange={priceRange}
+          onPriceRangeChange={setPriceRange}
+          selectedType={selectedType}
+          onTypeChange={setSelectedType}
+        />
+      </div>
+    );
+  };
 }
+
+
 
 export default App;
