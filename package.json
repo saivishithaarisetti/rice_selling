@@ -1,7 +1,10 @@
 {
+  "homepage": "https://github.com/saivishithaarisetti/rice_selling.git",
   "name": "myapp",
   "version": "1.0.0",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "npm run deploy",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
