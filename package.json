@@ -1,10 +1,10 @@
 {
-  "homepage": "https://github.com/saivishithaarisetti/rice_selling.git",
+  "homepage": "https://github.com/saivishithaarisetti.github.io/rice_selling.git",
   "name": "myapp",
   "version": "1.0.0",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "npm run deploy",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -13,9 +13,9 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^7.3.0",
     "react-icons": "^4.12.0",
-    "react-scripts": "5.0.1"
+    "react-router-dom": "^7.3.0",
+    "react-scripts": "^5.0.1"
   },
   "browserslist": {
     "production": [
@@ -28,5 +28,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
