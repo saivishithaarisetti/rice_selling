@@ -29,9 +29,9 @@ function Products() {
         <h3>Filter by Price</h3>
         <select value={priceFilter} onChange={(e) => setPriceFilter(e.target.value)}>
           <option value="all">All Prices</option>
-          <option value="under20">Under $20</option>
-          <option value="20to25">$20 - $25</option>
-          <option value="over25">Over $25</option>
+          <option value="under20">Under Rs.20</option>
+          <option value="20to25">Rs.20 - Rs.25</option>
+          <option value="over25">Over Rs.25</option>
         </select>
       </div>
 
@@ -41,7 +41,7 @@ function Products() {
             <img src={product.image} alt={product.name} />
             <h3>{product.name}</h3>
             <p>Origin: {product.origin}</p>
-            <p className="price">${product.price}</p>
+            <p className="price">Rs.{product.price}</p>
             <button onClick={() => addToCart(product)}>Add to Cart</button>
           </div>
         ))}
