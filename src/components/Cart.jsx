@@ -20,7 +20,7 @@ function Cart() {
                 <img src={item.image} alt={item.name} />
                 <div className="item-details">
                   <h3>{item.name}</h3>
-                  <p>${item.price}</p>
+                  <p>₹{item.price}</p>
                   <div className="quantity-controls">
                     <label>
                       Quantity:
@@ -38,7 +38,7 @@ function Cart() {
             ))}
           </div>
           <div className="cart-summary">
-            <h3>Total: ${total.toFixed(2)}</h3>
+            <h3>Total: ₹{total.toFixed(2)}</h3>
             <button className="checkout-button">Proceed to Checkout</button>
           </div>
         </>

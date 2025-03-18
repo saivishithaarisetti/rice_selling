@@ -28,7 +28,7 @@ export const Filters = ({
               className="w-full"
             />
             <span className="text-sm text-gray-600">
-              ${priceRange[0]} - ${priceRange[1]}
+              ₹{priceRange[0]} - ₹{priceRange[1]}
             </span>
           </div>
         </div>
