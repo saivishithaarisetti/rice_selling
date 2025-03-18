@@ -16,9 +16,9 @@ function App() {
     <Router>
       <CartProvider>
         <div className="app">
-          <Header />
           <main>
             <Routes>
+              <Header />
               <Route path="/" element={<Home />} />
               <Route path="/products" element={<Products />} />
               <Route path="/cart" element={<Cart />} />
