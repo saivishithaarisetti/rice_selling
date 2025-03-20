@@ -1,125 +1,126 @@
+/* Contact Page */
 .contact-page {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.contact-info {
+  background-color: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+.info-section {
+  margin-bottom: 2rem;
+}
+
+.info-section h3 {
+  font-size: 1.3rem;
+  color: #4CAF50;
+  margin-bottom: 0.5rem;
+}
+
+.info-section p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.contact-form {
+  background-color: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.contact-form button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.contact-form button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Contact Page */
+@media (max-width: 768px) {
   .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
-  
-  .contact-info {
-    background-color: white;
-    padding: 3rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .contact-info h1 {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 2rem;
-  }
-  
-  .info-section {
-    margin-bottom: 2rem;
-  }
-  
-  .info-section h3 {
-    font-size: 1.3rem;
-    color: #4CAF50;
-    margin-bottom: 0.5rem;
-  }
-  
-  .info-section p {
-    font-size: 1.1rem;
-    color: #666;
-    line-height: 1.6;
-  }
-  
+
+  .contact-info,
   .contact-form {
-    background-color: white;
-    padding: 3rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
   }
-  
-  .contact-form h2 {
+
+  .contact-info h1 {
     font-size: 2rem;
-    color: #2c3e50;
-    margin-bottom: 2rem;
   }
-  
-  .form-group {
-    margin-bottom: 1.5rem;
+
+  .contact-form h2 {
+    font-size: 1.8rem;
   }
-  
-  .form-group label {
-    display: block;
-    font-size: 1.1rem;
-    color: #333;
-    margin-bottom: 0.5rem;
-  }
-  
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-  }
-  
-  .form-group textarea {
-    height: 150px;
-    resize: vertical;
-  }
-  
-  .form-group input:focus,
-  .form-group textarea:focus {
-    outline: none;
-    border-color: #4CAF50;
-  }
-  
-  .contact-form button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: 100%;
-  }
-  
-  .contact-form button:hover {
-    background-color: #45a049;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .contact-content {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-  
-    .contact-info,
-    .contact-form {
-      padding: 2rem;
-    }
-  
-    .contact-info h1 {
-      font-size: 2rem;
-    }
-  
-    .contact-form h2 {
-      font-size: 1.8rem;
-    }
-  }
+}
