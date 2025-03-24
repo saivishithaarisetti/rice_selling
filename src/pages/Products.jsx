@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
-import { Filters } from '../components/Filters';
 import '../styles/Products.css';
 
 const products = [
@@ -49,21 +48,5 @@ function Products() {
     </div>
   );
 }
-
-const App = () => {
-    const [priceRange, setPriceRange] = useState([0, 50]);
-    const [selectedType, setSelectedType] = useState('All');
-  
-    return (
-      <div className="p-8">
-        <Filters
-          priceRange={priceRange}
-          onPriceRangeChange={setPriceRange}
-          selectedType={selectedType}
-          onTypeChange={setSelectedType}
-        />
-      </div>
-    );
-  };
 
 export default Products;

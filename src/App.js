@@ -7,7 +7,6 @@ import Products from './pages/Products';
 import Cart from './components/Cart';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import { Filters } from './components/Filters';
 import { useState } from 'react';
 import './App.css';
 
