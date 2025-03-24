@@ -12,15 +12,28 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [priceRange, setPriceRange] = useState([0, 50]);
+  const [selectedType, setSelectedType] = useState('All');
+
   return (
     <Router>
       <CartProvider>
         <div className="app">
+          <Header /> 
           <main>
             <Routes>
-              <Header />
               <Route path="/" element={<Home />} />
-              <Route path="/products" element={<Products />} />
+              <Route path="/products" element={
+                <>
+                  <Filters
+                    priceRange={priceRange}
+                    onPriceRangeChange={setPriceRange}
+                    selectedType={selectedType}
+                    onTypeChange={setSelectedType}
+                  />
+                  <Products />
+                </>
+              } />
               <Route path="/cart" element={<Cart />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
@@ -30,24 +43,6 @@ function App() {
       </CartProvider>
     </Router>
   );
-
-  const App = () => {
-    const [priceRange, setPriceRange] = useState([0, 50]);
-    const [selectedType, setSelectedType] = useState('All');
-  
-    return (
-      <div className="p-8">
-        <Filters
-          priceRange={priceRange}
-          onPriceRangeChange={setPriceRange}
-          selectedType={selectedType}
-          onTypeChange={setSelectedType}
-        />
-      </div>
-    );
-  };
 }
-
-
 
 export default App;
