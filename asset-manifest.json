@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/rice_selling/static/css/main.bf2d1453.css",
-    "main.js": "/rice_selling/static/js/main.b7ac29ed.js",
+    "main.js": "/rice_selling/static/js/main.a4ac5e31.js",
     "index.html": "/rice_selling/index.html",
     "main.bf2d1453.css.map": "/rice_selling/static/css/main.bf2d1453.css.map",
-    "main.b7ac29ed.js.map": "/rice_selling/static/js/main.b7ac29ed.js.map"
+    "main.a4ac5e31.js.map": "/rice_selling/static/js/main.a4ac5e31.js.map"
   },
   "entrypoints": [
     "static/css/main.bf2d1453.css",
-    "static/js/main.b7ac29ed.js"
+    "static/js/main.a4ac5e31.js"
   ]
 }
