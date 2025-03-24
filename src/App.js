@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import Home from './pages/Home';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import Products from './pages/Products';
 import Cart from './components/Cart';
@@ -11,11 +11,8 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [priceRange, setPriceRange] = useState([0, 50]);
-  const [selectedType, setSelectedType] = useState('All');
-
   return (
-    <Router>
+    <Router basename='/rice_selling'>
       <CartProvider>
         <div className="app">
           <Header /> 
