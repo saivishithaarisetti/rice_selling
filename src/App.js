@@ -20,16 +20,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/products" element={
-                <>
-                  <Filters
-                    priceRange={priceRange}
-                    onPriceRangeChange={setPriceRange}
-                    selectedType={selectedType}
-                    onTypeChange={setSelectedType}
-                  />
-                  <Products />
-                </>
-              } />
+                  <Products />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
